@@ -11,20 +11,23 @@ document.addEventListener("DOMContentLoaded", () => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add("visible");
-                observer.unobserve(entry.target); // evita reprocessamento
+                observer.unobserve(entry.target);
             }
         });
     }, observerOptions);
 
     document.querySelectorAll(".fade-in").forEach(el => observer.observe(el));
 
-
     // Smooth Scrolling
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener("click", function (e) {
+            const href = this.getAttribute("href");
+            
+            if (!href || href === "#") return;
+
             e.preventDefault();
 
-            const target = document.querySelector(this.getAttribute("href"));
+            const target = document.querySelector(href);
             if (!target) return;
 
             target.scrollIntoView({
