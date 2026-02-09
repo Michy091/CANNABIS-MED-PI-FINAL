@@ -2,7 +2,7 @@
 PROJETO INTEGRADOR COM O TEMA: O USO MEDICINAL DA CANNABIS
 
 ---
-##Autores##
+##Autores
 Discentes:
 
 Michelly Silva
@@ -11,7 +11,7 @@ Leticia Dionizio
 
 Instituição: IFRN CAMPUS JOÃO CÂMARA
 
-## ✨ Funcionalidades Principais
+##  Funcionalidades Principais
 
 ### Header e Navegação
 - Header fixo com barra de navegação transparente com efeito blur
