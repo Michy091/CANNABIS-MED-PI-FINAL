@@ -2,7 +2,8 @@
 PROJETO INTEGRADOR COM O TEMA: O USO MEDICINAL DA CANNABIS
 
 ---
-##Autores
+Autores
+
 Discentes:
 
 Michelly Silva
