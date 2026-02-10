@@ -41,13 +41,6 @@ body {
     z-index: 1000;
     border-bottom: 2px solid var(--accent);
 }
-#header .inner {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
 
 #header .inner {
     max-width: 1200px;
@@ -57,7 +50,6 @@ body {
     justify-content: space-between;
     align-items: center;
 }
-
 
 #header h1 {
     margin: 0;
@@ -89,6 +81,7 @@ nav#nav ul {
     display: flex;
     gap: 3rem;
     flex-wrap: wrap;
+    justify-content: flex-end; /* Ajustado para alinhar à direita */
 }
 
 nav#nav a {
@@ -160,8 +153,8 @@ nav#nav li.current a {
 #banner header {
     max-width: 900px;
     margin: 0 auto;
-}
-
+    position: relative;
+    z-index: 2;
 }
 
 #banner h2 {
@@ -181,12 +174,8 @@ nav#nav li.current a {
 }
 
 @keyframes float {
-    0%, 100% {
-        transform: translateY(0px);
-    }
-    50% {
-        transform: translateY(30px);
-    }
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(30px); }
 }
 
 /* ==================== CONTAINER E GRID ==================== */
@@ -202,21 +191,10 @@ nav#nav li.current a {
     gap: 2.5rem;
 }
 
-.col-4 {
-    grid-column: span 4;
-}
-
-.col-6 {
-    grid-column: span 6;
-}
-
-.col-8 {
-    grid-column: span 8;
-}
-
-.col-12 {
-    grid-column: span 12;
-}
+.col-4 { grid-column: span 4; }
+.col-6 { grid-column: span 6; }
+.col-8 { grid-column: span 8; }
+.col-12 { grid-column: span 12; }
 
 /* ==================== SEÇÕES INTRO ==================== */
 #intro {
@@ -232,6 +210,7 @@ nav#nav li.current a {
     position: relative;
     border: 1px solid var(--border);
     overflow: hidden;
+    height: 100%;
 }
 
 #intro section::before {
@@ -264,25 +243,13 @@ nav#nav li.current a {
     animation: iconFloat 3s ease-in-out infinite;
 }
 
-#intro section:nth-child(1) .icon {
-    animation-delay: 0s;
-}
-
-#intro section:nth-child(2) .icon {
-    animation-delay: 0.3s;
-}
-
-#intro section:nth-child(3) .icon {
-    animation-delay: 0.6s;
-}
+#intro section:nth-child(1) .icon { animation-delay: 0s; }
+#intro section:nth-child(2) .icon { animation-delay: 0.3s; }
+#intro section:nth-child(3) .icon { animation-delay: 0.6s; }
 
 @keyframes iconFloat {
-    0%, 100% {
-        transform: translateY(0px);
-    }
-    50% {
-        transform: translateY(-15px);
-    }
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
 }
 
 #intro h2 {
@@ -338,6 +305,9 @@ section header.major h2::after {
     position: relative;
     border: 1px solid var(--border);
     overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .box::before {
@@ -393,6 +363,7 @@ section header.major h2::after {
     color: var(--text-light);
     margin: 0.8rem 0 1.5rem;
     line-height: 1.8;
+    flex-grow: 1;
 }
 
 /* ==================== PESQUISA CIENTÍFICA ==================== */
@@ -559,6 +530,7 @@ section header.major h2::after {
     padding: 1rem;
     border-radius: 10px;
     flex-shrink: 0;
+    height: fit-content;
 }
 
 .date strong {
@@ -601,33 +573,6 @@ section header.major h2::after {
     color: var(--primary-dark);
     transform: translateY(-5px);
     box-shadow: 0 10px 25px rgba(74, 202, 168, 0.3);
-}
-
-.contact {
-    list-style: none;
-}
-
-.contact li {
-    margin-bottom: 2.5rem;
-}
-
-.contact h3 {
-    font-size: 1rem;
-    margin-bottom: 0.8rem;
-    color: var(--accent);
-    font-weight: 700;
-}
-
-.contact p {
-    color: rgba(255, 255, 255, 0.8);
-}
-
-.contact a {
-    color: var(--accent-light);
-}
-
-.contact a:hover {
-    color: var(--white);
 }
 
 .divided {
@@ -682,35 +627,17 @@ section header.major h2::after {
 
 /* ==================== RESPONSIVO ==================== */
 @media (max-width: 1024px) {
-    .col-4 {
-        grid-column: span 6;
-    }
+    .col-4 { grid-column: span 6; }
+    .col-6 { grid-column: span 6; }
+    .col-8 { grid-column: span 12; }
 
-    .col-6 {
-        grid-column: span 6;
-    }
-
-    .col-8 {
-        grid-column: span 12;
-    }
-
-    #banner h2 {
-        font-size: 2.8rem;
-    }
-
-    section header.major h2 {
-        font-size: 2.2rem;
-    }
-
-    nav#nav ul {
-        gap: 1.5rem;
-    }
+    #banner h2 { font-size: 2.8rem; }
+    section header.major h2 { font-size: 2.2rem; }
+    nav#nav ul { gap: 1.5rem; }
 }
 
 @media (max-width: 768px) {
-    body {
-        padding-top: 90px;
-    }
+    body { padding-top: 90px; }
 
     #header {
         flex-direction: column;
@@ -722,154 +649,58 @@ section header.major h2::after {
         text-align: center;
     }
 
-    nav#nav {
-        width: 100%;
-    }
-
+    nav#nav { width: 100%; }
     nav#nav ul {
         gap: 1rem;
         justify-content: center;
         width: 100%;
     }
 
-    .col-4,
-    .col-4-medium,
-    .col-6,
-    .col-6-medium,
-    .col-8 {
-        grid-column: span 12;
-    }
+    .col-4, .col-6, .col-8 { grid-column: span 12; }
+    .col-12-small { grid-column: span 12; }
 
-    .col-12-small {
-        grid-column: span 12;
-    }
+    #banner { padding: 80px 1.5rem 60px; }
+    #banner h2 { font-size: 2.2rem; }
+    #banner p { font-size: 1rem; }
 
-    #banner {
-        padding: 80px 1.5rem 60px;
-    }
+    .container { padding: 2.5rem 1.5rem; }
+    section header.major h2 { font-size: 1.8rem; }
 
-    #banner h2 {
-        font-size: 2.2rem;
-    }
+    .box { padding: 1.5rem; }
+    .actions { gap: 1rem; }
 
-    #banner p {
-        font-size: 1rem;
-    }
+    .button { padding: 0.7rem 1.5rem; font-size: 0.9rem; }
+    .button.large { padding: 0.9rem 2rem; font-size: 1rem; }
 
-    .container {
-        padding: 2.5rem 1.5rem;
-    }
-
-    section header.major h2 {
-        font-size: 1.8rem;
-    }
-
-    .box {
-        padding: 1.5rem;
-    }
-
-    .actions {
-        gap: 1rem;
-    }
-
-    .button {
-        padding: 0.7rem 1.5rem;
-        font-size: 0.9rem;
-    }
-
-    .button.large {
-        padding: 0.9rem 2rem;
-        font-size: 1rem;
-    }
-
-    #footer {
-        padding: 3rem 1.5rem 2rem;
-    }
-
-    .dates li {
-        gap: 1.5rem;
-    }
-
-    .date {
-        min-width: 70px;
-        padding: 0.8rem;
-    }
-
-    .date strong {
-        font-size: 1.5rem;
-    }
-
-    section header.major h2::after {
-        width: 60px;
-    }
+    #footer { padding: 3rem 1.5rem 2rem; }
+    .dates li { gap: 1.5rem; }
+    .date { min-width: 70px; padding: 0.8rem; }
+    .date strong { font-size: 1.5rem; }
+    section header.major h2::after { width: 60px; }
 }
 
 @media (max-width: 480px) {
-    #header {
-        padding: 0.8rem;
-    }
+    #header { padding: 0.8rem; }
+    #header h1 { font-size: 1.4rem; }
+    nav#nav a { font-size: 0.85rem; gap: 0.5rem; }
+    nav#nav ul { gap: 0.8rem; }
 
-    #header h1 {
-        font-size: 1.4rem;
-    }
+    #banner { padding: 60px 1rem 50px; }
+    #banner h2 { font-size: 1.8rem; }
+    #banner p { font-size: 0.95rem; }
 
-    nav#nav a {
-        font-size: 0.85rem;
-        gap: 0.5rem;
-    }
+    .container { padding: 2rem 1rem; }
+    .row { gap: 1.5rem; }
+    section header.major h2 { font-size: 1.6rem; }
 
-    nav#nav ul {
-        gap: 0.8rem;
-    }
-
-    #banner {
-        padding: 60px 1rem 50px;
-    }
-
-    #banner h2 {
-        font-size: 1.8rem;
-    }
-
-    #banner p {
-        font-size: 0.95rem;
-    }
-
-    .container {
-        padding: 2rem 1rem;
-    }
-
-    .row {
-        gap: 1.5rem;
-    }
-
-    section header.major h2 {
-        font-size: 1.6rem;
-    }
-
-    .box {
-        padding: 1.2rem;
-    }
-
+    .box { padding: 1.2rem; }
     .box .image.featured {
         margin: -1.2rem -1.2rem 1rem -1.2rem;
         padding: 1.5rem;
     }
 
-    .actions {
-        flex-direction: column;
-    }
-
-    .button {
-        width: 100%;
-        justify-content: center;
-    }
-
-    .dates li {
-        flex-direction: column;
-        gap: 1rem;
-    }
-
-    .date {
-        width: 100%;
-    }
+    .actions { flex-direction: column; }
+    .button { width: 100%; justify-content: center; }
+    .dates li { flex-direction: column; gap: 1rem; }
+    .date { width: 100%; }
 }
