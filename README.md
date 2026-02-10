@@ -1,119 +1,38 @@
-# CANNABIS-MED-PI-FINAL
-PROJETO INTEGRADOR COM O TEMA: O USO MEDICINAL DA CANNABIS
+# 🌿 Cannabis Medicinal - Informação Baseada em Evidências
+
+Site desenvolvido como atividade avaliativa para a disciplina de projeto integrador, ( Desenvolvimento Web relacionado a Biologia) do Curso Técnico em Informática.
+
+O objetivo deste projeto é apresentar informações científicas sobre o uso terapêutico de canabinoides, desmistificando o tema com base em estudos e evidências clínicas.
+
+## 🔗 Link do Projeto
+Acesse o site online: **https://michy091.github.io/CANNABIS-MED-PI-FINAL/**
+
+## 👥 Integrantes
+* **Nome:** Michelly Silva
+* **Matrícula:** 20231064010025
+
+* **Nome:** José Henrique
+* **Matrícula:** 20231064010039
+
+* **Nome:** Leticia Dionizio
+* **Matrícula:** 20231064010015
+  
+## 🛠 Tecnologias Utilizadas
+* **HTML5:** Estruturação semântica do conteúdo.
+* **CSS3:** Estilização, variáveis (custom properties) e animações.
+* **JavaScript:** Efeitos de scroll suave e "fade-in" dos elementos ao rolar a página.
+* **Template:** Baseado no design "TXT" (ou similar) do HTML5 UP.
+
+## 📚 Conteúdo Abordado (Biologia)
+O site explora:
+1.  **Sistema Endocanabinoide:** Explicação biológica dos receptores CB1 e CB2.
+2.  **Aplicações Clínicas:** Uso em epilepsia, dor crônica, Parkinson e ansiedade.
+3.  **Neuroproteção:** Como os compostos atuam no sistema nervoso.
+
+## 🚀 Como executar localmente
+1. Clone este repositório.
+2. Certifique-se de que a pasta `assets` contém as imagens e bibliotecas (jQuery, etc) necessárias.
+3. Abra o arquivo `index.html` no seu navegador.
 
 ---
-Autores
-
-Discentes:
-
-Michelly Silva
-José Henrique
-Leticia Dionizio
-
-Instituição: IFRN CAMPUS JOÃO CÂMARA
-
-##  Funcionalidades Principais
-
-### Header e Navegação
-- Header fixo com barra de navegação transparente com efeito blur
-- Links suaves para cada seção
-- Logo estilizado com fonte Crimson Pro
-
-### Hero Section
-- Imagem de fundo com gradiente verde natural
-- Título chamativo e descrição da proposta
-- Botões de CTA (Call-to-Action) para navegação
-
-### Seção de Benefícios
-- 3 cards principais com ícones (Neuroproteção, Controle da Dor, Melhora do Sono)
-- Animação ao passar do mouse
-- Layout responsivo com grid automático
-
-### Aplicações Clínicas
-- 6 cards com aplicações principais:
-  - Epilepsia Refratária
-  - Dor Crônica
-  - Esclerose Múltipla
-  - Náusea e Vômito
-  - Transtornos de Ansiedade
-  - Doença de Parkinson
-- Botões "Saiba mais" com links internos
-
-### Pesquisa e Evidências
-- Explicação do Sistema Endocanabinoide
-- Informações sobre Canabinoides Principais (THC e CBD)
-- Links para publicações e estudos clínicos
-
-### Footer Completo
-- Artigos recentes e atualizações
-- Informações sobre o site
-- Recursos educacionais
-- Seção para profissionais
-- Contato direto (email, telefone, redes sociais)
-- Links sociais (Facebook, Twitter, Instagram, LinkedIn, YouTube)
-- Copyright
-
-### Animações
-- **Fade-in ao rolar** – Elementos aparecem com efeito suave
-- **Scroll suave** – Navegação entre seções com transição fluida
-- **Hover effects** – Cards levantam ao passar do mouse
-- **Intersection Observer** – Carrega animações conforme o usuário rola
-
----
-
-## 📱 Responsividade
-
-O layout adapta-se automaticamente para:
-
-| Dispositivo | Comportamento |
-|-------------|---|
-| **Smartphones** | Grid em coluna única, menu flexível |
-| **Tablets** | Grid com 2 colunas, ajustes de espaçamento |
-| **Desktops** | Grid completo com 12 colunas |
-
-Breakpoints principais:
-- `768px` – Mobile
-- `1024px` – Tablet
-- `1200px+` – Desktop
-
----
-
-## 🧑‍💻 Como Usar
-
-### Clonar o repositório:
-```bash
-git clone https://github.com/Michy091/michy091.github.io.git
-cd michy091.github.io
-
-Abrir o site:
-Basta abrir o arquivo index.html em qualquer navegador moderno (Chrome, Firefox, Safari, Edge).
-
-Não é necessário servidor nem dependências externas!
-
-Seções do Site
-Início – Apresentação e proposta do site
-Benefícios – Efeitos terapêuticos principais
-Aplicações Clínicas – Condições médicas estudadas
-Pesquisa e Evidências – Dados científicos
-Contato e Rodapé – Informações institucionais e recursos
-
-Aviso Importante
-Todo o conteúdo é exclusivamente EDUCACIONAL.
-
-O uso de cannabis medicinal deve ser feito SOMENTE com orientação médica especializada, respeitando a legislação vigente do Brasil e demais jurisdições.
-
-icença
-Este projeto possui finalidade educacional e informativa.
-
-Sinta-se livre para:
-
-Estudar e aprender com o código
-Adaptar e evoluir o projeto
-Usar como base para seu próprio site
-Respeite os créditos quando aplicável.
-
-
-Créditos
-Design inspirado por HTML5 UP
-Ícones por Font Awesome
-Fontes por Google Fonts
+&copy; 2026 Cannabis Medicinal.
