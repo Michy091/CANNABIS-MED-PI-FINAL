@@ -81,7 +81,7 @@ nav#nav ul {
     display: flex;
     gap: 3rem;
     flex-wrap: wrap;
-    justify-content: flex-end; /* Ajustado para alinhar à direita */
+    justify-content: flex-end;
 }
 
 nav#nav a {
